@@ -1,0 +1,52 @@
+.container {
+  padding: 2rem;
+}
+
+.card-setup,
+.card-input,
+.draw-section {
+  margin-bottom: 2rem;
+}
+
+.cards-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid rgb(107, 107, 107);
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.card table {
+  border-collapse: separate;
+  border-spacing: 6px; /* controls the gap between cells */
+  width: 100%;
+}
+
+.card.winner {
+  background-color: #c8f7c5;
+  color: rgb(0, 0, 0);
+}
+
+.cell {
+  padding: 5px;
+  gap: 5px;
+  border-radius: 30px;
+  min-width: 5px;
+  min-height: 5px;
+  /* background-color: #c8f7c5; */
+  border: 1px solid rgb(107, 107, 107);
+  text-align: center;
+}
+
+.cell.free {
+  color: gray;
+}
+
+.cell.matched {
+  background-color: rgb(12, 199, 12);
+}
