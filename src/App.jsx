@@ -37,8 +37,7 @@ export default function App() {
     let index = 0;
     for (let i = 0; i < 5; i++) {
       const row = [];
-      for (let j = 0; j < 5; j++) 
-        {
+      for (let j = 0; j < 5; j++) {
         if (i === 2 && j === 2) {
           row.push(null); // Center free space
         } else {
@@ -107,6 +106,15 @@ export default function App() {
     <div className="container">
       <h2>Bingo Checker</h2>
 
+      {winners.length > 0 && (
+        <div className="winner-message">
+          <p>
+            Card{winners.length > 1 ? "s" : ""}{" "}
+            {winners.map((w) => `#${w + 1}`).join(", ")} won!
+          </p>
+        </div>
+      )}
+
       {step === 1 && (
         <div className="card-setup">
           <p>How many cards?</p>
@@ -155,7 +163,7 @@ export default function App() {
                 className={`card ${winners.includes(idx) ? "winner" : ""}`}
               >
                 <p>
-                  Bingo Card #{idx + 1}{" "}
+                  Card #{idx + 1}{" "}
                   {winners.includes(idx) && <strong>(Winner)</strong>}
                 </p>
                 <table>
